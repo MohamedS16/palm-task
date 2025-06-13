@@ -1,8 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const {getAllDisbursments} = require('./../controllers/disbursmentController');
+const {
+    getAllDisbursments,
+    createNewDisbursment
+} = require('./../controllers/disbursmentController');
 
-router.get('/',getAllDisbursments);
+router.route('/')
+    .get(getAllDisbursments)
+    .post(createNewDisbursment);
+
 
 module.exports = router

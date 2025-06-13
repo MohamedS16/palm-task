@@ -7,28 +7,28 @@ const data = [
         submittedAt: "6-5-2025"
     } ,
     {
-        id: 1,
+        id: 2,
         borrowerName: "Mohamed", 
         loanAmount: "500",
         status: "Approved",
         submittedAt: "5-5-2025"
     } ,
     {
-        id: 1,
+        id: 3,
         borrowerName: "Hisham", 
         loanAmount: "100",
         status: "Rejected",
         submittedAt: "4-5-2025"
     } ,
     {
-        id: 1,
+        id: 4,
         borrowerName: "Ismaeel", 
         loanAmount: "800",
         status: "Pending",
         submittedAt: "3-5-2025"
     }, 
     {
-        id: 1,
+        id: 5,
         borrowerName: "Kiro", 
         loanAmount: "900",
         status: "Pending",

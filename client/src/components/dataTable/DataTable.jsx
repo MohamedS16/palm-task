@@ -1,8 +1,10 @@
+import { useContext} from "react";
 import styles from "./DataTable.module.css";
+import { filterContext } from "../../contexts/filterContext";
 
 const DataTable = ({ data }) => {
   const columns = Object.keys(data[0] || {});
-  console.log(data);
+  const filterValue = useContext(filterContext)
 
   return (
     <div className={styles.container}>
@@ -10,17 +12,22 @@ const DataTable = ({ data }) => {
         <table className={styles.table}>
           <thead>
             <tr>
-              {columns.map((c) => (
-                <th>{c}</th>
+              {columns.map((c,idx) => (
+                <th key={idx}>{c}</th>
               ))}
+              <th>Approve</th>
             </tr>
           </thead>
           <tbody>
-            {data?.map((e, index) => (
+            {data?.filter((v)=>{
+                if (!filterValue.filter) return true;
+                return v.status === filterValue.filter;
+            }).map((e, index) => (
               <tr key={index}>
                 {Object.values(e).map((c, idx) => (
                   <td key={idx}>{c}</td>
                 ))}
+                <td><button>Approve</button></td>
               </tr>
             ))}
           </tbody>

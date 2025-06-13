@@ -1,0 +1,8 @@
+This is a Task Made By React JS (VITE) and Node JS
+To Run the project: 
+1- open the terminal of the project
+2- cd server
+3- nodemon app.js (backend server is now running)
+4- cd ../client
+5- npm run dev
+6- in the browser go to localhost:5173

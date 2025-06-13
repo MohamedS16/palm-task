@@ -1,0 +1,38 @@
+
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #ffffff; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100vw;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #002c5a;
+}
+
+
+.select {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #002c5a;
+}
+
+.select:focus {
+  border-color: #002c5a;
+  outline: none;
+}
